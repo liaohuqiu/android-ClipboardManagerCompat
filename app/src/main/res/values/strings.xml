@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ClipBoardCompat</string>
+    <string name="copy_tip">Copy this, the data in clipboard will be changed.</string>
+    <string name="data_changed_tip">The data in clipboard has been changed.</string>
+</resources>
