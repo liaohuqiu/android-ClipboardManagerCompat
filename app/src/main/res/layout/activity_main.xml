@@ -3,17 +3,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="10dp">
 
-    <TextView
+    <EditText
         android:id="@+id/copy_tip"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:padding="15dp"
+        android:layout_height="wrap_content"
+        android:maxLines="3"
         android:text="@string/copy_tip"
         android:textColor="#000"
         android:textIsSelectable="true"
         android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/api_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:textColor="#000"
+        android:textIsSelectable="true" />
+
+    <TextView
+        android:id="@+id/result_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:textColor="#000"
+        android:textIsSelectable="true" />
+
 
 </LinearLayout>

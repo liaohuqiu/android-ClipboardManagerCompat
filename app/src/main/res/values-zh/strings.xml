@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ClipboardManagerCompat</string>
+    <string name="copy_tip">请尝试复制这里的内容，剪切板内容将会变化。</string>
+    <string name="data_changed_tip" formatted="false">剪切板内容已变成: \n%s</string>
+</resources>

@@ -5,10 +5,10 @@ import android.os.Handler;
 import android.os.Looper;
 import android.text.ClipboardManager;
 import android.text.TextUtils;
-import android.util.Log;
 
 /**
  * For API level before HoneyComb(11)
+ * Just check the clipboard in every {@link #CHECK_CLIPBOARD_INTERVAL} ms.
  */
 class ClipboardManagerCompatImplHCBefore extends ClipboardManagerCompatImplBase implements Runnable {
 
@@ -16,6 +16,8 @@ class ClipboardManagerCompatImplHCBefore extends ClipboardManagerCompatImplBase 
      * It's better to check clipboard data for a static thread
      */
     private static Handler sHandler;
+
+    public static int CHECK_CLIPBOARD_INTERVAL = 500;
 
     static {
         sHandler = new Handler(Looper.getMainLooper());
@@ -40,8 +42,9 @@ class ClipboardManagerCompatImplHCBefore extends ClipboardManagerCompatImplBase 
     }
 
     private void startListen() {
+        mLastData = getText();
         mWorking = true;
-        sHandler.postDelayed(this, 10000);
+        sHandler.post(this);
     }
 
     private void stopListen() {
@@ -83,9 +86,8 @@ class ClipboardManagerCompatImplHCBefore extends ClipboardManagerCompatImplBase 
     public void run() {
         if (mWorking) {
             CharSequence data = getText();
-            Log.d("uc-toast", "run: " + data);
             check(data);
-            sHandler.postDelayed(this, 1000);
+            sHandler.postDelayed(this, CHECK_CLIPBOARD_INTERVAL);
         }
     }
 
@@ -94,7 +96,7 @@ class ClipboardManagerCompatImplHCBefore extends ClipboardManagerCompatImplBase 
             return;
         }
 
-        if (!TextUtils.isEmpty(mLastData) && mLastData.equals(data)) {
+        if (!TextUtils.isEmpty(mLastData) && data != null && mLastData.toString().equals(data.toString())) {
             return;
         }
         mLastData = data;

@@ -1,6 +1,6 @@
 import os
 vars = {
-        'lib_version': '1.0.1',
+        'lib_version': '1.0.2',
         }
 
 files = [

@@ -1,4 +1,4 @@
-package in.srain.cube.clipboardcompat.clipboardcompat;
+package in.srain.cube.clipboardcompat;
 
 import org.junit.Test;
 
