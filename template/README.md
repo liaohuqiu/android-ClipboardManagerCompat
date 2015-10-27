@@ -23,7 +23,7 @@ public interface ClipboardManagerCompat {
 
 * Screen snapshot
 
-<div><img src='https://github.com/liaohuqiu/android-ClipboardManagerCompat/master/art/clipboard-manager-compat.gif' width="300px" style='border: #f1f1f1 solid 1px'/></div>
+<div><img src='https://raw.githubusercontent.com/liaohuqiu/android-ClipboardManagerCompat/master/art/clipboard-manager-compat.gif' width="300px" style='border: #f1f1f1 solid 1px'/></div>
 
 #### Import
 
