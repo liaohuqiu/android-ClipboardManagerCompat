@@ -44,7 +44,7 @@ allprojects {
 Add to dependencies:
 
 ```groovy
-compile 'in.srain.cube:clipboard-manager-compat:1.0.2'
+compile 'in.srain.cube:clipboard-manager-compat:1.0.3'
 ```
 
 ### LICENSE

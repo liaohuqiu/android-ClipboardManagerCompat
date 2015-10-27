@@ -19,7 +19,7 @@ public class MainActivity extends Activity {
         TextView apiInfoTextView = (TextView) findViewById(R.id.api_info);
         final TextView resultInfoTextView = (TextView) findViewById(R.id.result_info);
 
-        String apiInfo = String.format("Current API level is: %s", Build.VERSION.SDK_INT);
+        String apiInfo = String.format("Current API level is: %s", Build.VERSION.SDK);
         apiInfoTextView.setText(apiInfo);
 
         final ClipboardManagerCompat clipboardManager = ClipboardManagerCompatFactory.create(this);
